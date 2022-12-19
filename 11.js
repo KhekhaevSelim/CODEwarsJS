@@ -1,7 +1,16 @@
-var summation = function (num) {
-    let sum = 0;
-    for(let i = 1; i<=num;i++) {
-    sum = sum + i;
+function findOutlier(integers){
+    let odd = [];
+    let even = [];
+    for(let i = 0; i<integers.length; i++){
+    if(integers[i] % 2 === 0) {
+    even.push(integers[i]);
+    } else {
+    odd.push(integers[i]);
     }
-    return sum
+    }
+    if(even.length>odd.length){
+    return odd[0];
+    } else {
+    return even[0];
+    }
     }
